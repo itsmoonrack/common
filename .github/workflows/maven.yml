@@ -14,16 +14,16 @@ on:
   pull_request:
     branches: [ "main" ]
 
+permissions:
+  id-token: write
+  contents: read
+  security-events: write
+  actions: read
+
 jobs:
   build:
 
     runs-on: ubuntu-latest
-    
-    permissions:
-      id-token: write
-      contents: read
-      security-events: write
-      actions: read
 
     steps:
     - uses: actions/checkout@v4
